@@ -1,5 +1,7 @@
 # Data
-data/autocast_questions.json
+data/*
+!data/README.md
+# !data/data.zip
 
 # Other
 .DS_Store
