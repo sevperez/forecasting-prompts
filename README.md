@@ -1,17 +1,17 @@
 # Automating Prompt Engineering for Forecasting Tasks
 
-DATASCI 210 - Capstone
-
-Section 003, Summer 2023
-
-Master of Information and Data Science
-
-University of California, Berkeley
+DATASCI 210 - Capstone<br>Section 003, Summer 2023<br>Master of Information and Data Science<br>University of California, Berkeley
 
 
 ## Table of Contents
 
-[ TODO: insert table of contents ]
+- [Team](#team)
+- [Project](#project)
+- [Pipeline](#pipeline)
+  - [Evaluation Data](#evaluation-data)
+  - [Experimental Results](#experimental-results)
+- [Instructions](#instructions)
+- [Demo](#demo)
 
 
 ## Team

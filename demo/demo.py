@@ -10,7 +10,7 @@ import pandas as pd
 
 # streamlit
 import streamlit as st
-from run_pipeline import run_pipeline
+from run_pipeline import run_pipeline, format_choices
 from evaluation_graph import *
 
 
@@ -113,10 +113,16 @@ def run_all_stages():
 def reset_stage():
     st.session_state.stage = 0
 
+def get_choices(df, question):
+    row = df[df["question"] == question].iloc[0]
+    choices = row["choices"]
+    return choices
 
 # ------------------------------
 # APPLICATION
 # ------------------------------
+
+st.set_page_config(page_title="Automating Prompt Engineering for Forecasting Tasks")
 
 ### SIDEBAR
 
@@ -146,10 +152,16 @@ question_selected = st.selectbox(
 if "question" not in st.session_state or question_selected != st.session_state.question:
     st.session_state.stage = 0
     st.session_state.question = question_selected
+    st.session_state.choices = get_choices(df_samples, question_selected)
 
 st.markdown(
-    f"_Question: {question_selected}_"
+    f"Question: {question_selected}"
 )
+
+st.markdown(
+    f"Choices:"
+)
+st.markdown(f"{format_choices(st.session_state.choices)}")
 
 st.markdown(
     """<hr style="height:5px;border:none;color:yellow;background-color:gray;" /> """, 
@@ -161,6 +173,6 @@ run_pipeline(df_samples, question_selected, PROMPTS, st.session_state.stage)
 if "stage" in st.session_state and st.session_state.stage >= MAX_STAGE:
     st.button("Reset", on_click=reset_stage)
 else:
-    st.button("Next stage", on_click=increment_stage)
-    st.button("Run all", on_click=run_all_stages)
-
+    col1, col2, col3 = st.columns([1, 1, 3])
+    col1.button("Next stage", on_click=increment_stage)
+    col2.button("Run all", on_click=run_all_stages)
