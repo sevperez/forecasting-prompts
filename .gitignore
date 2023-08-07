@@ -1,7 +1,7 @@
 # Data
 data/*
 !data/README.md
-# !data/data.zip
+!data/data.zip
 
 # Other
 .DS_Store
