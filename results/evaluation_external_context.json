@@ -1,0 +1,12 @@
+[
+    {
+        "top_k_majority_in_range":false,
+        "count":68,
+        "percentage":69.39
+    },
+    {
+        "top_k_majority_in_range":true,
+        "count":30,
+        "percentage":30.61
+    }
+]
