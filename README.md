@@ -68,7 +68,7 @@ Separately, we noticed that the system prompt has significant ramifications for 
 | Example            | 24.49%                |
 | Context + example  | 28.57%                |
 
-![Pipeline performance](images/pipeline_performance.png "Pipeline performance")
+<img src="images/pipeline_performance.png" alt="Pipeline performance" width="50%">
 
 ## Instructions
 
