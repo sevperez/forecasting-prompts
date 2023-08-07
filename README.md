@@ -41,13 +41,13 @@ We explored two means of context enrichment: internal and external. Internal con
 
 We used [active prompt](https://arxiv.org/abs/2302.12246) methodology, as described by Diao et al. (2023) to select optimal examples for use with a given question. The active prompt methodology is based on the idea that the LLM is most effective when it is provided with examples that reduce its uncertainty. We use the LLM to generate a set of candidate examples for a given question, and then select the optimal examples from this set based on the degree to which they reduce model uncertainty. An illustration of this process is shown below.
 
-![Active prompt example selection](images/active_prompt_example_selection.png "Active prompt example selection")
+![Active prompt example selection](images/active_prompt.png "Active prompt example selection")
 
 ### Evaluation Data
 
 To evaluate pipeline performance, we use the [Autocast dataset](https://github.com/andyzoujm/autocast), as described by Zou et al. (2022). The Autocast dataset includes a variety of true/false, multiple choice, and numeric forecasting questions as well as crowd predictions. We use the crowd predictions as the target metric, specifically on "Active" questions (meaning those for which there is not yet any answer). The below chart shows the count of different question types in the Autocast dataset. Further details on the data we use are provided in the [data](data) folder.
 
-![Autocast question types](images/autocast_question_types.png "Autocast question types")
+![Autocast question types](images/autocast_dataset.png "Autocast question types")
 
 ### Experimental Results
 
@@ -68,7 +68,7 @@ Separately, we noticed that the system prompt has significant ramifications for 
 | Example            | 24.49%                |
 | Context + example  | 28.57%                |
 
-![Pipeline results](images/pipeline_results.png "Pipeline results")
+![Pipeline performance](images/pipeline_performance.png "Pipeline performance")
 
 ## Instructions
 
