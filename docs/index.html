@@ -92,7 +92,6 @@
         <div id="team" class="py-4">
             <h2 class="text-2xl font-bold mb-4">Project Team</h2>
             <div class="flex flex-wrap -mx-4">
-                <!-- <div class="w-full md:w-1/4 lg:w-1/4 px-4 mb-4"> -->
                 <div class="w-1/2 sm:w-1/4 px-4 mb-4">
                     <div class="overflow-hidden text-center">
                         <img src="images/coco.png" alt="Coco Cao Jinglu" class="rounded-full w-full">
@@ -102,7 +101,6 @@
                     </div>
                 </div>
 
-                <!-- <div class="w-full md:w-1/4 lg:w-1/4 px-4 mb-4"> -->
                 <div class="w-1/2 sm:w-1/4 px-4 mb-4">
                     <div class="overflow-hidden text-center">
                         <img src="images/severin.png" alt="Severin Perez" class="rounded-full w-full">
@@ -112,7 +110,6 @@
                     </div>
                 </div>
 
-                <!-- <div class="w-full md:w-1/4 lg:w-1/4 px-4 mb-4"> -->
                 <div class="w-1/2 sm:w-1/4 px-4 mb-4">
                     <div class="overflow-hidden text-center">
                         <img src="images/luc.png" alt="Luc Robitaille" class="rounded-full w-full">
@@ -122,7 +119,6 @@
                     </div>
                 </div>
 
-                <!-- <div class="w-full md:w-1/4 lg:w-1/4 px-4 mb-4"> -->
                 <div class="w-1/2 sm:w-1/4 px-4 mb-4">
                     <div class="overflow-hidden text-center">
                         <img src="images/greg.png" alt="Greg Rosen" class="rounded-full w-full">
@@ -151,6 +147,13 @@
                 We used <a href="https://arxiv.org/abs/2302.12246" target="_blank">active prompt</a> methodology, as described by Diao et al. (2023), to select optimal examples for use with a given question. The active prompt methodology is based on the idea that the LLM is most when it is provided with examples that reduce its uncertainty. We use the LLM to generate a set of candidate examples for a given question and then select the optimal examples from this set based on the degree to which they reduce model uncertainty.
             </p>
             <img src="images/active_prompt.png" alt="Active prompt example selection" class="max-w-full mx-auto my-8">
+
+            <h3 class="text-xl font-bold mb-4">Demo</h3>
+            <p class="text-lg">The below video shows a short demonstration of the prompt enrichment pipeline in action. Each step of the demo shows the next prompt enrichment component.</p>
+            <video class="py-4 w-3/4" controls>
+                <source src="images/prompt_enrichment_demo.mov" type="video/quicktime">
+                Your browser does not support the video tag.
+            </video>
         </div>
         <div id="evaluation" class="py-4">
             <h2 class="text-2xl font-bold mb-4">Evaluation</h2>
