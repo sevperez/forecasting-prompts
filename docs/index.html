@@ -66,6 +66,9 @@
         </div>
         <div id="pipeline">
             <h2 class="section">Pipeline</h2>
+            <p>
+                Our solution to this problem is a pipeline that automatically enriches simple prompts during a two-stage process. First, we explore context enrichment where we identify and attach internal and external context to a question in order to provide the LLM with more information about the question. Second, we use active prompt methodology to identify optimal examples for use with a given question. These examples are selected based on the degree to which they reduce model uncertainty when answering a question. The below diagram shows the end-to-end pipeline, as well as the baseline pipeline that we use for comparison.
+            </p>
             <img src="images/end_to_end_pipeline.png" alt="End-to-end pipeline" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
 
             <h3 id="context-enrichment">Context Enrichment</h3>
