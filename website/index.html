@@ -1,91 +1,150 @@
-"""<html>
-<style>
-.section {
-  background-color:#003262;
-  color:#FDB515;
-  padding: 20px;
-}
-
-.column {
-  float: left;
-  width: 40.00%;
-  padding: 50px;
-}
-
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.align {
-  margin: auto;
-  width: 80%;
-  padding: 50px;
-}
-</style>
+<!DOCTYPE html>
+<html>
 
 <head>
-    <title>W210 Capstone: Automating Prompt Engineering</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
-<center><h1 class = 'section' >W210 Capstone: Automating Prompt Engineering</h1>
-<h3>Coco Jinglau Cao,   Severin Perez,   Luc Robitaille,   Gregory Rosen </h3>
-<h5> <font color="purple">coco_caojinglu@ischool.berkeley.edu,  sevperez@ischool.berkeley.edu,   luc.robitaille@berkeley.edu,   grosen@ischool.berkeley.edu </font></h5>
-</center>
-<center>
-<h2 class = 'section'>Introduction</h2>
-<h4> Introduction Content to go here </h4>
+    <nav>
+        <div style="text-align: center;">
+            <h1>Automating Prompt Engineering for Forecasting Tasks</h1>
+        </div>
+        <ul style="display: flex; justify-content: center;">
+            <li><a href="#team">Team</a></li>
+            <li><a href="#pipeline">Pipeline</a></li>
+            <li><a href="#evaluation">Evaluation</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="description">
+            <p>
+                Predicting the future is notoriously difficult, but what if we could capture the knowledge embedded in large language models (LLMs) to make the task easier? Our project aims to <span class="highlight">improve LLM performance at forecasting tasks</span> by converting simple questions into rich prompts with relevant context and examples. Our goal is to explore LLM effectiveness on forecasting tasks without the need for resource-intensive fine-tuning.
+            </p>
+        </div>
+        <div id="team">
+            <h2 class="section">Project Team</h2>
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img src="images/coco.png" alt="Coco Cao Jinglu">
+                        <div class="container">
+                            <h4>Coco Cao Jinglu</h4>
+                        </div>
+                    </div>
+                </div>
 
-<h2 class = 'section'>Problem Statement</h2>
-<h4 class = 'align'> Predicting future events is both hugely valuable and incredibly difficult. Our goal is to <font color=#003262> use large language models (LLMs) to make forecasting easier</font>,
-by leveraging existing knowledge embeddings and carefully designing prompts all without the need for fine-tuning.
-</h4>
+                <div class="column">
+                    <div class="card">
+                        <img src="images/severin.png" alt="Severin Perez">
+                        <div class="container">
+                            <h4>Severin Perez</h4>
+                        </div>
+                    </div>
+                </div>
 
-<h2 class = 'section'>Pipeline</h2>
-<img src = 'https://www.pythonanywhere.com/user/lucrobes/files/home/lucrobes/Active.png' alt = 'Active Learning Pipeline'
-    style="width:800px;height:400px;" class = 'center'>
+                <div class="column">
+                    <div class="card">
+                        <img src="images/luc.png" alt="Luc Robitaille">
+                        <div class="container">
+                            <h4>Luc Robitaille</h4>
+                        </div>
+                    </div>
+                </div>
 
-<h2 class = 'section'>Dataset and LLM</h2>
-<p> infographics about AutoCast and GPT-3.5-Turbo here </h3>
+                <div class="column">
+                    <div class="card">
+                        <img src="images/greg.png" alt="Greg Rosen">
+                        <div class="container">
+                            <h4>Greg Rosen</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pipeline">
+            <h2 class="section">Pipeline</h2>
+            <img src="images/end_to_end_pipeline.png" alt="End-to-end pipeline" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
 
-<h2 class = 'section'>Sample Application</h2>
+            <h3 id="context-enrichment">Context Enrichment</h3>
+            <p>
+                We explored two means of context enrichment: internal and external. Internal context is information already known to the LLM. We extract this information by asking the LLM to identify entities, dates, and other important items in the text of a question, and then to provide definitions, history, and information on the relationships between each of the entities. We then use this internal context to enrich the original prompt. External context is similar, but drawn from external sources. For example, we using  Wikipedia and Google search results to enrich the original prompt.
+            </p>
+            <img src="images/context_enrichment.png" alt="Context enrichment" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
 
-<center>
-<div class="row">
-  <div class="column">
-        <img src = 'https://www.pythonanywhere.com/user/lucrobes/files/home/lucrobes/Sample.png' alt = 'Active Learning Pipeline'
-    style="width:650px;height:400px;" class = 'center'>
-    </div>
-    <div class="column">
-        <img src = 'https://www.pythonanywhere.com/user/lucrobes/files/home/lucrobes/Sample 2.png' alt = 'Active Learning Pipeline'
-    style="width:650px;height:400px;" class = 'center'>
-    </div>
-</div>
-</center>
-<center>
-<video src='https://drive.google.com/file/d/1fPNHjWG9wo6LvNEyZ3fYg4HsAQV0YQhZ/view?resourcekey' alt = 'Active Learning Demo'>
-</center>
-<h2 class = 'section'>Market</h2>
-<img src = 'https://www.pythonanywhere.com/user/lucrobes/files/home/lucrobes/Market.png' alt = 'Active Learning Pipeline'
-    style="width:800px;height:400px;" class = 'center'>
-
-<h2 class = 'section'>Active Learning</h2>
-<img src = 'https://www.pythonanywhere.com/user/lucrobes/files/home/lucrobes/Active.png' alt = 'Active Learning Pipeline'
-    style="width:800px;height:400px;" class = 'center'>
-
-<h2 class = 'section'>Results</h2>
-<h4  class = 'align'> Infographics about Current Results Here </h4>
-
-<h2 class = 'section'>Next Steps</h2>
-<img src = 'https://www.pythonanywhere.com/user/lucrobes/files/home/lucrobes/Next.png' alt = 'Active Learning Pipeline'
-    style="width:800px;height:400px;" class = 'center'>
-
-
-<p>
-    Find out more about more in our source repository: https://github.com/sevperez/autocast <a href="https://github.com/sevperez/autocast"></a>
-</p>
-</center>
+            <h3>Active Prompt Example Selection</h3>
+            <p>
+                We used <a href="https://arxiv.org/abs/2302.12246">active prompt</a> methodology, as described by Diao et al. (2023), to select optimal examples for use with a given question. The active prompt methodology is based on the idea that the LLM is most when it is provided with examples that reduce its uncertainty. We use the LLM to generate a set of candidate examples for a given question and then select the optimal examples from this set based on the degree to which they reduce model uncertainty.
+            </p>
+            <img src="images/active_prompt.png" alt="Active prompt example selection" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+        </div>
+        <div id="evaluation">
+            <h2 class="section">Evaluation</h2>
+            <h3>Data</h3>
+            <p>
+                To evaluate pipeline performance, we use the <a href="https://github.com/andyzoujm/autocast">Autocast dataset</a>, as described Zou et al. (2022). The Autocast dataset includes a variety of true/false, multiple choice, and numeric forecasting questions crowd predictions. We use the crowd predictions as the target metric, specifically on "Active" questions (meaning those for which is not yet any answer).
+            </p>
+            <img src="images/autocast_dataset.png" alt="Autocast question types" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+    
+            <h3>Experimental Results</h3>
+            <p>
+                We evaluated the performance of our pipeline using several permutations of prompt enrichment. In-range prediction is defined percentage of pipeline predictions that fell within the defined acceptable range compared to the crowd forecasts. The range was necessary because crowd experts were not required to make only a single choice&mdash;they could hedge their prediction by probabilities to multiple choices.
+            </p>
+            <p>
+                In all, we found only marginal performance improvements over baseline. Given that there were only a total of 98 throughout experiments, the small changes between baseline and context may not be statistically meaningful. A table and chart of the are shown below.
+            </p>
+            <p>
+                We were surprised to see that adding in optimized examples actually reduced performance. We have several hypotheses for this, include that the model may have been taking past examples into account when answering new questions, despite specific not to in the system prompt.
+            </p>
+            <p>
+                Separately, we noticed that the system prompt has significant ramifications for whether context and examples improve baseline, for that matter on how well the baseline itself does. We experimented with a wide variety of system prompts and see this as an for further experimentation. A good system prompt that helps the LLM understand how to use context and examples is clearly important.
+            </p>
+        
+            <div style="display: flex; padding-top: 10px">
+                <div style="flex: 3;">
+                    <table>
+                        <tr>
+                            <th>Pipeline</th>
+                            <th>% in-range predictions</th>
+                        </tr>
+                        <tr>
+                            <td>Baseline</td>
+                            <td>27.55%</td>
+                        </tr>
+                        <tr>
+                            <td>Context</td>
+                            <td>27.55%</td>
+                        </tr>
+                        <tr>
+                            <td>External context</td>
+                            <td>30.61%</td>
+                        </tr>
+                        <tr>
+                            <td>Example</td>
+                            <td>24.49%</td>
+                        </tr>
+                        <tr>
+                            <td>Context + example</td>
+                            <td>28.57%</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="flex: 2;">
+                    <img src="images/pipeline_performance.png" alt="Pipeline performance" class="center" style="max-width: 80%; height: auto;">
+                </div>
+            </div>
+        </div>
+        <div id="conclusion">
+            <h2 class="section">Conclusion</h2>
+            <p>
+                Overall, we found minimal increases in forecasting performance when prompt engineering for additional context and examples. believe this is due to the small sample size of the Autocast dataset, and the fact that the crowd predictions are not accurate may not be an ideal truth proxy. We did, however, learn a great deal about the power of LLMs, prompt engineering, and active learning given minimal user queries.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>A Capstone project with the U.C. Berkeley, Master of Information and Data Science (MIDS) program.</p>
+    </footer>
 </body>
-</html>"""
+
+</html>

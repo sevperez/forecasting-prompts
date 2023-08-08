@@ -29,25 +29,25 @@ Predicting the future is notoriously difficult, but what if we could capture the
 
 Our solution to this problem is a pipeline that automatically enriches simple prompts during a two-stage process. First, we explore *context enrichment* where we identify and attach internal and external context to a question in order to provide the LLM with more information about the question. Second, we use active prompt methodology to identify optimal examples for use with a given question. These examples are selected based on the degree to which they reduce model uncertainty when answering a question. The below diagram shows the end-to-end pipeline, as well as the baseline pipeline that we use for comparison.
 
-![End-to-end pipeline](images/end_to_end_pipeline.png "End-to-end pipeline")
+![End-to-end pipeline](website/images/end_to_end_pipeline.png "End-to-end pipeline")
 
 ### Context Enrichment
 
 We explored two means of context enrichment: internal and external. Internal context is information already known to the LLM. We extract this information by asking the LLM to identify entities, dates, and other important items in the text of a question, and then to provide definitions, history, and information on the relationships between each of the entities. We then use this internal context to enrich the original prompt. External context is similar, but drawn from external sources. For example, we explored using both Wikipedia and Google search results to enrich the original prompt. An illustration of this process is shown below.
 
-![Context enrichment](images/context_enrichment.png "Context enrichment")
+![Context enrichment](website/images/context_enrichment.png "Context enrichment")
 
 ### Active Prompt Example Selection
 
 We used [active prompt](https://arxiv.org/abs/2302.12246) methodology, as described by Diao et al. (2023) to select optimal examples for use with a given question. The active prompt methodology is based on the idea that the LLM is most effective when it is provided with examples that reduce its uncertainty. We use the LLM to generate a set of candidate examples for a given question, and then select the optimal examples from this set based on the degree to which they reduce model uncertainty. An illustration of this process is shown below.
 
-![Active prompt example selection](images/active_prompt.png "Active prompt example selection")
+![Active prompt example selection](website/images/active_prompt.png "Active prompt example selection")
 
 ### Evaluation Data
 
 To evaluate pipeline performance, we use the [Autocast dataset](https://github.com/andyzoujm/autocast), as described by Zou et al. (2022). The Autocast dataset includes a variety of true/false, multiple choice, and numeric forecasting questions as well as crowd predictions. We use the crowd predictions as the target metric, specifically on "Active" questions (meaning those for which there is not yet any answer). The below chart shows the count of different question types in the Autocast dataset. Further details on the data we use are provided in the [data](data) folder.
 
-![Autocast question types](images/autocast_dataset.png "Autocast question types")
+![Autocast question types](website/images/autocast_dataset.png "Autocast question types")
 
 ### Experimental Results
 
@@ -68,7 +68,7 @@ Separately, we noticed that the system prompt has significant ramifications for 
 | Example            | 24.49%                |
 | Context + example  | 28.57%                |
 
-<img src="images/pipeline_performance.png" alt="Pipeline performance" width="50%">
+<img src="website/images/pipeline_performance.png" alt="Pipeline performance" width="50%">
 
 ## Instructions
 
