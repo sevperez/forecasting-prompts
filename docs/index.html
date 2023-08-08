@@ -3,151 +3,222 @@
 
 <head>
     <title>Forecasting Prompts</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        a {
+            color: #0097a7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #003262;
+        }
+
+        .highlight {
+            color: #003262;
+            font-weight: bold;
+        }
+
+        .cal-color-dark {
+            color: #003262;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #003262;
+            color: #FDB515;
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: #003262;
+        }
+
+        nav {
+            background-color: #003262;
+        }
+
+        nav h1 {
+            color: #FDB515;
+        }
+
+        nav a {
+            color: #FDB515
+        }
+        
+        nav a:hover {
+            color: #ffffff;
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <div style="text-align: center;">
-            <h1>Automating Prompt Engineering for Forecasting Tasks</h1>
+    <nav class="shadow-lg py-3">
+        <div class="text-center py-4">
+            <h1 class="text-2xl font-bold">Automating Prompt Engineering for Forecasting Tasks</h1>
         </div>
-        <ul style="display: flex; justify-content: center;">
-            <li><a href="#team">Team</a></li>
-            <li><a href="#pipeline">Pipeline</a></li>
-            <li><a href="#evaluation">Evaluation</a></li>
-            <li><a href="#conclusion">Conclusion</a></li>
+        <ul class="flex flex-wrap justify-center">
+            <li class="mr-6 mb-4 sm:mb-0"><a href="#team" class="font-semibold">Team</a></li>
+            <li class="mr-6 mb-4 sm:mb-0"><a href="#pipeline" class="font-semibold">Pipeline</a></li>
+            <li class="mr-6 mb-4 sm:mb-0"><a href="#evaluation" class="font-semibold">Evaluation</a></li>
+            <li class="mr-6 mb-4 sm:mb-0"><a href="#conclusion" class="font-semibold">Conclusion</a></li>
+            <li class="mr-6 mb-4 sm:mb-0"><a href="https://github.com/sevperez/forecasting-prompts" class="font-semibold" target="_blank">Repository</a></li>
         </ul>
     </nav>
-    <main>
-        <div id="description">
-            <p>
-                Predicting the future is notoriously difficult, but what if we could capture the knowledge embedded in large language models (LLMs) to make the task easier? Our project aims to <span class="highlight">improve LLM performance at forecasting tasks</span> by converting simple questions into rich prompts with relevant context and examples. Our goal is to explore LLM effectiveness on forecasting tasks without the need for resource-intensive fine-tuning.
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div id="description" class="py-4">
+            <p class="text-xl text-gray-700 text-center">
+                Predicting the future is notoriously difficult, but what if we could capture the knowledge embedded in large language models (LLMs) to make the task easier? Our project aims to <span class="font-semibold highlight">improve LLM performance at forecasting tasks</span> by converting simple questions into rich prompts with relevant context and examples. Our goal is to explore LLM effectiveness on forecasting tasks without the need for resource-intensive fine-tuning.
             </p>
         </div>
-        <div id="team">
-            <h2 class="section">Project Team</h2>
-            <div class="row">
-                <div class="column">
-                    <div class="card">
-                        <img src="images/coco.png" alt="Coco Cao Jinglu">
-                        <div class="container">
-                            <h4>Coco Cao Jinglu</h4>
+        <div id="team" class="py-4">
+            <h2 class="text-2xl font-bold mb-4">Project Team</h2>
+            <div class="flex flex-wrap -mx-4">
+                <!-- <div class="w-full md:w-1/4 lg:w-1/4 px-4 mb-4"> -->
+                <div class="w-1/2 sm:w-1/4 px-4 mb-4">
+                    <div class="overflow-hidden text-center">
+                        <img src="images/coco.png" alt="Coco Cao Jinglu" class="rounded-full w-full">
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2 cal-color-dark">Coco Cao Jinglu</h4>
                         </div>
                     </div>
                 </div>
 
-                <div class="column">
-                    <div class="card">
-                        <img src="images/severin.png" alt="Severin Perez">
-                        <div class="container">
-                            <h4>Severin Perez</h4>
+                <!-- <div class="w-full md:w-1/4 lg:w-1/4 px-4 mb-4"> -->
+                <div class="w-1/2 sm:w-1/4 px-4 mb-4">
+                    <div class="overflow-hidden text-center">
+                        <img src="images/severin.png" alt="Severin Perez" class="rounded-full w-full">
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2 cal-color-dark">Severin Perez</h4>
                         </div>
                     </div>
                 </div>
 
-                <div class="column">
-                    <div class="card">
-                        <img src="images/luc.png" alt="Luc Robitaille">
-                        <div class="container">
-                            <h4>Luc Robitaille</h4>
+                <!-- <div class="w-full md:w-1/4 lg:w-1/4 px-4 mb-4"> -->
+                <div class="w-1/2 sm:w-1/4 px-4 mb-4">
+                    <div class="overflow-hidden text-center">
+                        <img src="images/luc.png" alt="Luc Robitaille" class="rounded-full w-full">
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2 cal-color-dark">Luc Robitaille</h4>
                         </div>
                     </div>
                 </div>
 
-                <div class="column">
-                    <div class="card">
-                        <img src="images/greg.png" alt="Greg Rosen">
-                        <div class="container">
-                            <h4>Greg Rosen</h4>
+                <!-- <div class="w-full md:w-1/4 lg:w-1/4 px-4 mb-4"> -->
+                <div class="w-1/2 sm:w-1/4 px-4 mb-4">
+                    <div class="overflow-hidden text-center">
+                        <img src="images/greg.png" alt="Greg Rosen" class="rounded-full w-full">
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2 cal-color-dark">Greg Rosen</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="pipeline">
-            <h2 class="section">Pipeline</h2>
-            <p>
+        <div id="pipeline" class="py-4">
+            <h2 class="text-2xl font-bold mb-4">Pipeline</h2>
+            <p class="text-lg">
                 Our solution to this problem is a pipeline that automatically enriches simple prompts during a two-stage process. First, we explore context enrichment where we identify and attach internal and external context to a question in order to provide the LLM with more information about the question. Second, we use active prompt methodology to identify optimal examples for use with a given question. These examples are selected based on the degree to which they reduce model uncertainty when answering a question. The below diagram shows the end-to-end pipeline, as well as the baseline pipeline that we use for comparison.
             </p>
-            <img src="images/end_to_end_pipeline.png" alt="End-to-end pipeline" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+            <img src="images/end_to_end_pipeline.png" alt="End-to-end pipeline" class="max-w-full mx-auto my-8">
 
-            <h3 id="context-enrichment">Context Enrichment</h3>
-            <p>
+            <h3 id="context-enrichment" class="text-xl font-bold mb-4">Context Enrichment</h3>
+            <p class="text-lg">
                 We explored two means of context enrichment: internal and external. Internal context is information already known to the LLM. We extract this information by asking the LLM to identify entities, dates, and other important items in the text of a question, and then to provide definitions, history, and information on the relationships between each of the entities. We then use this internal context to enrich the original prompt. External context is similar, but drawn from external sources. For example, we using  Wikipedia and Google search results to enrich the original prompt.
             </p>
-            <img src="images/context_enrichment.png" alt="Context enrichment" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+            <img src="images/context_enrichment.png" alt="Context enrichment" class="max-w-full mx-auto my-8">
 
-            <h3>Active Prompt Example Selection</h3>
-            <p>
-                We used <a href="https://arxiv.org/abs/2302.12246">active prompt</a> methodology, as described by Diao et al. (2023), to select optimal examples for use with a given question. The active prompt methodology is based on the idea that the LLM is most when it is provided with examples that reduce its uncertainty. We use the LLM to generate a set of candidate examples for a given question and then select the optimal examples from this set based on the degree to which they reduce model uncertainty.
+            <h3 class="text-xl font-bold mb-4">Active Prompt Example Selection</h3>
+            <p class="text-lg">
+                We used <a href="https://arxiv.org/abs/2302.12246" target="_blank">active prompt</a> methodology, as described by Diao et al. (2023), to select optimal examples for use with a given question. The active prompt methodology is based on the idea that the LLM is most when it is provided with examples that reduce its uncertainty. We use the LLM to generate a set of candidate examples for a given question and then select the optimal examples from this set based on the degree to which they reduce model uncertainty.
             </p>
-            <img src="images/active_prompt.png" alt="Active prompt example selection" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+            <img src="images/active_prompt.png" alt="Active prompt example selection" class="max-w-full mx-auto my-8">
         </div>
-        <div id="evaluation">
-            <h2 class="section">Evaluation</h2>
-            <h3>Data</h3>
-            <p>
-                To evaluate pipeline performance, we use the <a href="https://github.com/andyzoujm/autocast">Autocast dataset</a>, as described Zou et al. (2022). The Autocast dataset includes a variety of true/false, multiple choice, and numeric forecasting questions crowd predictions. We use the crowd predictions as the target metric, specifically on "Active" questions (meaning those for which is not yet any answer).
+        <div id="evaluation" class="py-4">
+            <h2 class="text-2xl font-bold mb-4">Evaluation</h2>
+            <h3 class="text-xl font-bold mb-4">Data</h3>
+            <p class="text-lg">
+                To evaluate pipeline performance, we use the <a href="https://github.com/andyzoujm/autocast" target="_blank">Autocast dataset</a>, as described Zou et al. (2022). The Autocast dataset includes a variety of true/false, multiple choice, and numeric forecasting questions crowd predictions. We use the crowd predictions as the target metric, specifically on "Active" questions (meaning those for which is not yet any answer).
             </p>
-            <img src="images/autocast_dataset.png" alt="Autocast question types" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+            <img src="images/autocast_dataset.png" alt="Autocast question types" class="max-w-full mx-auto my-8">
     
-            <h3>Experimental Results</h3>
-            <p>
+            <h3 class="text-xl font-bold mb-4">Experimental Results</h3>
+            <p class="text-lg py-2">
                 We evaluated the performance of our pipeline using several permutations of prompt enrichment. In-range prediction is defined percentage of pipeline predictions that fell within the defined acceptable range compared to the crowd forecasts. The range was necessary because crowd experts were not required to make only a single choice&mdash;they could hedge their prediction by probabilities to multiple choices.
             </p>
-            <p>
+            <p class="text-lg py-2">
                 In all, we found only marginal performance improvements over baseline. Given that there were only a total of 98 throughout experiments, the small changes between baseline and context may not be statistically meaningful. A table and chart of the are shown below.
             </p>
-            <p>
+            <p class="text-lg py-2">
                 We were surprised to see that adding in optimized examples actually reduced performance. We have several hypotheses for this, include that the model may have been taking past examples into account when answering new questions, despite specific not to in the system prompt.
             </p>
-            <p>
+            <p class="text-lg py-2">
                 Separately, we noticed that the system prompt has significant ramifications for whether context and examples improve baseline, for that matter on how well the baseline itself does. We experimented with a wide variety of system prompts and see this as an for further experimentation. A good system prompt that helps the LLM understand how to use context and examples is clearly important.
             </p>
         
-            <div style="display: flex; padding-top: 10px">
-                <div style="flex: 3;">
-                    <table>
-                        <tr>
-                            <th>Pipeline</th>
-                            <th>% in-range predictions</th>
-                        </tr>
-                        <tr>
-                            <td>Baseline</td>
-                            <td>27.55%</td>
-                        </tr>
-                        <tr>
-                            <td>Context</td>
-                            <td>27.55%</td>
-                        </tr>
-                        <tr>
-                            <td>External context</td>
-                            <td>30.61%</td>
-                        </tr>
-                        <tr>
-                            <td>Example</td>
-                            <td>24.49%</td>
-                        </tr>
-                        <tr>
-                            <td>Context + example</td>
-                            <td>28.57%</td>
-                        </tr>
+            <div class="flex flex-col md:flex-row py-4">
+                <div class="md:w-2/3 py-5 md:pr-4">
+                    <table class="table-auto">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 font-semibold">Pipeline</th>
+                                <th class="px-4 py-2 font-semibold">% in-range predictions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border px-4 py-2">Baseline</td>
+                                <td class="border px-4 py-2">27.55%</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">Context</td>
+                                <td class="border px-4 py-2">27.55%</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">External context</td>
+                                <td class="border px-4 py-2">30.61%</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">Example</td>
+                                <td class="border px-4 py-2">24.49%</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">Context + example</td>
+                                <td class="border px-4 py-2">28.57%</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
-                <div style="flex: 2;">
-                    <img src="images/pipeline_performance.png" alt="Pipeline performance" class="center" style="max-width: 80%; height: auto;">
+                <div class="w-full md:w-1/3 text-center px-3 md:px-0">
+                    <img src="images/pipeline_performance.png" alt="Pipeline performance" class="max-w-full mx-auto my-8">
                 </div>
             </div>
         </div>
-        <div id="conclusion">
-            <h2 class="section">Conclusion</h2>
-            <p>
+        <div id="conclusion" class="py-4">
+            <h2 class="text-2xl font-bold mb-4">Conclusion</h2>
+            <p class="text-lg">
                 Overall, we found minimal increases in forecasting performance when prompt engineering for additional context and examples. believe this is due to the small sample size of the Autocast dataset, and the fact that the crowd predictions are not accurate may not be an ideal truth proxy. We did, however, learn a great deal about the power of LLMs, prompt engineering, and active learning given minimal user queries.
             </p>
         </div>
     </main>
-    <footer>
-        <p>A Capstone project with the U.C. Berkeley, Master of Information and Data Science (MIDS) program.</p>
+    <footer class="bg-gray-800 text-white py-4">
+        <p class="text-center">
+            A Capstone project with the U.C. Berkeley, Master of Information and Data Science (MIDS) program.
+        </p>
     </footer>
 </body>
 
